@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pretium_test/constants.dart';
 import 'package:pretium_test/core/assets.dart';
+import 'package:pretium_test/core/theme.dart';
 import 'package:pretium_test/router.dart';
 import 'package:pretium_test/utils/translations.dart';
 
@@ -25,8 +26,15 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: kAppName,
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       onGenerateRoute: AppRouter.generateRoute,
       initialRoute: AppRouter.splash,
+      // theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor)),
+      theme: AppTheme.light,
+      darkTheme: AppTheme.dark,
+      themeMode: ThemeMode.system,
     );
   }
 }
