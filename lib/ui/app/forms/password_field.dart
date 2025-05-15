@@ -11,7 +11,7 @@ class PasswordFormField extends StatefulWidget {
     this.onSavePressed,
     this.labelText,
     this.onSaveForm,
-    this.prefixIcon = const Icon(Icons.lock),
+    this.prefixIcon = const Icon(Icons.lock_outline),
   });
 
   final TextEditingController? controller;
@@ -40,11 +40,26 @@ class _PasswordFormFieldState extends State<PasswordFormField> {
       decoration: InputDecoration(
         labelText: widget.labelText,
         prefixIcon: widget.prefixIcon,
-        border: OutlineInputBorder(),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(width: .8, color: Colors.grey.shade600),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            width: 1,
+            color: Theme.of(context).colorScheme.error,
+          ),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        hintText: LocaleKeys.passwordHint.tr(),
+        hintStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
+        // labelStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
         suffixIcon: IconButton(
           alignment: Alignment.bottomCenter,
           icon: Icon(
-            _isPasswordObscured ? Icons.visibility : Icons.visibility_off,
+            _isPasswordObscured
+                ? Icons.visibility_off_outlined
+                : Icons.visibility_outlined,
           ),
           onPressed: () {
             setState(() {

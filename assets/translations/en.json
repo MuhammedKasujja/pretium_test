@@ -20,5 +20,12 @@
     "firstNameHint": "Enter your first name",
     "lastNameHint": "Enter your last name",
     "recoverPasswordHint": "Enter your email to receive a password reset code",
-    "sendResetCode": "Send Reset Code"
+    "sendResetCode": "Send Reset Code",
+    "pleaseEnterYourEmail": "Please enter your email",
+    "pleaseEnterYourFirstname": "Please enter your first name",
+    "pleaseEnterYourLastname": "Please enter your last name",
+    "pleaseEnterYourPassword": "Please enter your password",
+    "pleaseEnterValidEmail": "Please enter valid email",
+    "openTermsAndConditions": "Opening Terms and Conditions...",
+    "pleaseAcceptTerms": "You need to accept terms and conditions first"
 }

@@ -25,5 +25,12 @@ abstract class  LocaleKeys {
   static const lastNameHint = 'lastNameHint';
   static const recoverPasswordHint = 'recoverPasswordHint';
   static const sendResetCode = 'sendResetCode';
+  static const pleaseEnterYourEmail = 'pleaseEnterYourEmail';
+  static const pleaseEnterYourFirstname = 'pleaseEnterYourFirstname';
+  static const pleaseEnterYourLastname = 'pleaseEnterYourLastname';
+  static const pleaseEnterYourPassword = 'pleaseEnterYourPassword';
+  static const pleaseEnterValidEmail = 'pleaseEnterValidEmail';
+  static const openTermsAndConditions = 'openTermsAndConditions';
+  static const pleaseAcceptTerms = 'pleaseAcceptTerms';
 
 }

@@ -19,18 +19,19 @@ class AppForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late final Widget formChild;
+    if (child != null) {
+      formChild = SingleChildScrollView(child: child);
+    } else {
+      formChild = ScrollableListView(
+        primary: true,
+        padding: padding,
+        children: children,
+      );
+    }
     return FocusScope(
       node: focusNode,
-      child: Form(
-        key: formKey,
-        child:
-            child ??
-            ScrollableListView(
-              primary: true,
-              padding: padding,
-              children: children,
-            ),
-      ),
+      child: Form(key: formKey, child: formChild),
     );
   }
 }

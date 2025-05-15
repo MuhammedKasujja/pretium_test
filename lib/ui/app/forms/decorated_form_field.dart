@@ -66,7 +66,19 @@ class DecoratedFormField extends StatelessWidget {
           hintText: hint ?? '',
           suffixIcon: suffixIcon,
           prefixIcon: prefixIcon,
-          border: OutlineInputBorder(),
+          errorBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              width: 1,
+              color: Theme.of(context).colorScheme.error,
+            ),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(width: .8, color: Colors.grey.shade600),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          hintStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
+          errorStyle: TextStyle(color: Theme.of(context).colorScheme.error),
           floatingLabelBehavior:
               (hint ?? '').isNotEmpty && (label ?? '').isEmpty
                   ? FloatingLabelBehavior.always
