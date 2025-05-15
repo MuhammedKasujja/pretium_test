@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pretium_test/ui/app/intro/intro_screen.dart';
 import 'package:pretium_test/ui/auth/forgot_password_screen.dart';
 import 'package:pretium_test/ui/auth/login_screen.dart';
 import 'package:pretium_test/ui/auth/register_screen.dart';
@@ -10,6 +11,8 @@ class _Router {
     switch (settings.name) {
       case AppRouter.splash:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
+      case AppRouter.intro:
+        return MaterialPageRoute(builder: (_) => IntroScreen());
       case AppRouter.login:
         return MaterialPageRoute(builder: (_) => LoginScreen());
       case AppRouter.register:
@@ -36,6 +39,7 @@ class _Router {
 
 class AppRouter {
   static const String splash = '/';
+  static const String intro = '/intro';
   static const String login = '/login';
   static const String register = '/register';
   static const String forgotPassword = '/forgot-password';

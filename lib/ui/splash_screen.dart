@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pretium_test/constants.dart';
-import 'package:pretium_test/core/assets.dart';
 import 'package:pretium_test/router.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void _navigateToNextScreen() {
     Future.delayed(const Duration(seconds: 3), () {
       if (mounted) {
-        Navigator.pushReplacementNamed(context, AppRouter.login);
+        Navigator.pushReplacementNamed(context, AppRouter.intro);
       }
     });
   }
